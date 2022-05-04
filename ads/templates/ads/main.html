@@ -1,0 +1,151 @@
+{% extends 'ads/layout.html'%}
+
+{% block title %}
+Главная страница
+{% endblock %}
+
+{% block content %}
+
+{% for message in messages %}
+<div class="alerts-div">
+<div class="alert alert-info" id="closebutton" role="alert">
+    {{message}}
+<button type="button" class="btn-close" onclick="close_button()" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+</div>
+{% endfor %}
+
+    <div class="parameters-wrap">
+    <div class="parameters">
+            <form action="" method="POST">
+            <div class="choosecar">
+            <div class="select-width">
+                {{form.mark }}
+            </div>
+            <div class="select-width">
+                {{ form.model }}
+                </div>
+            </div>
+        <div class="parameters-inner">
+            <div class="price-year-width">
+                <div class="input-group">
+                    <span class="input-group-text">Год</span>
+                    {{ form.year_from }}
+                    {{ form.year_to }}
+                </div>
+            </div>
+            <div class="price-year-width">
+                <div class="input-group">
+                    <span class="input-group-text">Цена</span>
+                    {{ form.price_from }}
+                    {{ form.price_to }}
+                </div> 
+            </div>
+            <div class="sorting-width">
+                {{ form.sorting }}
+            </div>
+                <div class="mileage-drivewheels-width">
+                    <div class="input-group">
+                        <span class="input-group-text">Пробег</span>
+                        {{ form.mileage_from }}
+                        {{ form.mileage_to }}
+                    </div>   
+                </div>
+                <div class="mileage-drivewheels-width">
+                   {{ form.drive_wheels }}
+                </div>
+                <div class="location-width">
+                    {{ form.location }}
+                </div>
+            </div>
+                <div class="accept-button">
+                    <input class="btn btn-primary" type="submit" value="Применить">
+                </div>
+            {% csrf_token %}
+            </form>
+            </div>
+        </div>
+        {% for item in page_obj %}
+        <div class="ads-wrap1">
+            <div class="ads">
+                <div class="first-column1">
+                    <img src={{item.image}} class="ads-img">
+                    <div>
+                    <h3><a href={{item.link}} target="_blank">{{item.mark}} {{item.model}}, {{item.year}}</a></h3>
+                        {% if item.enginecapacity %}
+                    <span class="tech-params">{{item.enginecapacity}} л,</span>
+                        {% endif %}
+                        {% if item.enginepower %}
+                    <span class="tech-params">{{item.enginepower}} л.с,</span>
+                        {% endif %}
+                        {% if item.milage %}
+                    <span class="tech-params">{{item.milage}} км,</span>
+                        {% endif %}
+                        {% if item.drivewheels %}
+                    <span class="tech-params">{{item.drivewheels}},</span>
+                        {% endif %}
+                        {% if item.transmission %}
+                    <span class="tech-params">{{item.transmission}}</span></div>
+                    {% endif %}
+                    </div>
+            <div class="second-column">
+                <h3>{{item.price}} руб.</h3>
+                <h4>{{item.location}}</h4>
+                <form action="favourites/{{item.id}}/" method="POST">
+                    <input type="submit" class="btn btn-success" value="В избранное">
+                    {% csrf_token %}
+                </form>
+            </div>    
+            </div>
+        </div>
+    {% endfor %}
+    <nav aria-label="Page navigation example">
+        <ul class="pagination justify-content-center">
+        {% if page_obj.has_previous %}
+            <li class="page-item">
+            <a class="page-link" href="?page={{ page_obj.previous_page_number }}">Предыдущий</a>
+          </li>
+        {% else %}
+            <li class="page-item disabled">
+            <a class="page-link" href="#" tabindex="-1" aria-disabled="True">Предыдущий</a>
+          </li>
+        {% endif %}
+
+        {% if page_obj.number|add:'-4' > 1 %}
+            <li class="page-item"><a class="page-link" href="?page={{ page_obj.number|add:'-5' }}">&hellip;</a></li>
+        {% endif %}
+
+        {% for i in page_obj.paginator.page_range %}
+            {% if page_obj.number == i %}
+                <li class="page-item active" aria-current="page">
+              <span class="page-link">
+                {{ i }}
+                <span class="sr-only"></span>
+              </span>
+            </li>
+            {% elif i > page_obj.number|add:'-5' and i < page_obj.number|add:'5' %}
+                 <li class="page-item"><a class="page-link" href="?page={{ i }}">{{ i }}</a></li>
+            {% endif %}
+        {% endfor %}
+
+        {% if page_obj.paginator.num_pages > page_obj.number|add:'4' %}
+           <li class="page-item"><a class="page-link" href="?page={{ page_obj.number|add:'5' }}">&hellip;</a></li>
+        {% endif %}
+
+        {% if page_obj.has_next %}
+            <li class="page-item">
+            <a class="page-link" href="?page={{ page_obj.next_page_number }}">Следующий</a>
+          </li>
+        {% else %}
+            <li class="page-item disabled">
+            <a class="page-link" href="#" tabindex="-1" aria-disabled="True">Следующий</a>
+          </li>
+        {% endif %}
+      </ul>
+    </nav>
+    </section>
+<div class="redirect-to-telegram">
+<a href="/about/" target="_blank"><button class="btn btn-info"> Мы в телеграм!</button></a>
+</div>
+{% endblock %}
+

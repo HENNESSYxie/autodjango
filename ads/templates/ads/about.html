@@ -1,0 +1,16 @@
+{% extends 'ads/layout.html'%}
+{%load static%}
+{% block title %}
+Страница про нас
+{% endblock %}
+
+
+{% block content %}
+<div class="about-us">
+    <p>Сервис AutoChoose дает возможность выбора среди большого количества автомобилей, как новых, так и с пробегом. Благодаря фильтру у вас есть возможность гибко настроить поиск среди сотни тысяч объявлений. А использую вкладку с новостями, вы будете в курсе самых актулаьных автомобильных новостей России и мира. </p>
+    <h4>Также наш сервис доступен на платформе Telegram. Отсканируйте или кликните на QR-код ниже</h4>
+    <div class="img-qr-code">
+        <a href="https://t.me/AutoChooseCar_bot" target="_blank"><img src="{% static 'images/chart.png' %}" alt=""></a>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,24 @@
+{% extends "ads/layout.html" %}
+{% block title %}Авторизация{% endblock %}
+{% block content %}
+<div class="auth-page-full">
+    <h1 class="auth-page-header">Авторизация</h1>
+    <p class="some-text-p">Используйте форму ниже для авторизации</p>
+    <form action="." method="post" class="auth-form">
+        {% if message %}
+        <p class="error-message">{{ message }}</p>
+        {% endif %}
+        <span class="user-id-dashboard">Логин:
+        {{ form.username }}
+        </span>
+        <span class="user-id-dashboard">Пароль:
+        {{ form.password }}
+        </span>
+        {% csrf_token %}
+        <div class="buttons-account">
+        <p><input type="submit" class="btn btn-outline-primary" value="Войти"></p>
+        <p><a href="/account/register"><input type="button" class="btn btn-outline-primary" value="Регистрация"></a></p>
+        </div>
+    </form>
+    </div>
+{% endblock %}

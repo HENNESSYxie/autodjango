@@ -1,0 +1,19 @@
+{% extends 'ads/layout.html'%}
+
+{% block title %}
+{{ news.title }}
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+    <h1 class="title-inner">{{ news.title }}</h1>
+    <h4>{{ news.anons }}</h4>
+    <img src={{news.image}} class="main_image">
+        {% if news.text %}
+        <p>{{news.text}}</p>
+        {% endif %}
+        {% if news.tables %}
+        {{ news.tables }}
+        {% endif %}
+    </div>
+{% endblock %}

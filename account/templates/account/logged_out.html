@@ -1,0 +1,8 @@
+{% extends "ads/layout.html" %}
+{% block title %}Выход{% endblock %}
+{% block content %}
+<div class="auth-info-divs">
+    <h1 class="auth-page-header">Выход из аккаунта</h1>
+    <p class="some-text-p">Вы успешно вышли из аккаунта. Вы можете <a href="{% url 'dashboard' %}">авторизоваться заново</a>.</p>
+</div>
+{% endblock %}

@@ -1,0 +1,521 @@
+ul
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color:#32dc6a;
+    font-size: 22px;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+.redirect-to-telegram
+{
+position: fixed;
+bottom: 0;
+right: 0;
+}
+
+.user-image-contacts
+{
+margin: 0 auto;
+}
+
+.user-image-image
+{
+width: 200px;
+border: 5px solid black;
+border-radius: 140px;
+margin-top: 10px;
+}
+.dev-card
+{
+width: 440px;
+display: flex;
+flex-direction: column;
+background-color: white;
+border-radius: 10px;
+
+}
+.about-us
+{
+width: 900px;
+font-family: Verdana, Arial, Helvetica, sans-serif;
+background-color: white;
+border-radius: 10px;
+margin: 0 auto;
+text-align: center;
+}
+
+h4
+{
+text-align: center;
+}
+
+.user-text-contacts
+{
+font-size: 24px;
+padding: 10px;
+}
+
+button.btn.btn-success a
+{
+color:white;
+}
+button.btn.btn-success
+{
+width: 100%;}
+
+header
+{
+    margin-bottom: 50px;
+}
+.some-text-p
+{
+color:white;}
+.auth-form
+{
+display: grid;
+justify-items: center;
+align-items: center;
+}
+
+.register-page-full
+{
+margin: 0 auto;
+width: 570px;
+}
+
+.auth-page-full
+{
+margin:0 auto;
+width: 470px;}
+body
+{
+    background-color: #65e58f;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+label
+{
+color: white;
+font-weight: bold;
+}
+
+.auth-page-header
+{
+text-align: center;
+margin: 0px;
+}
+
+.auth-info-divs
+{
+margin: 0 auto;
+width: 500px;
+}
+
+li
+{
+padding: 0px;
+}
+
+.header-li
+{
+    list-style: none;
+    padding: 20px 15px 15px 10px;
+    text-decoration: none;
+}
+
+.user-id-dashboard
+{
+font-family: Verdana, Arial, Helvetica, sans-serif;
+font-size: 20px;
+display:grid;
+margin: 0 auto;
+}
+input.btn.btn-success
+{
+width: 100%;
+}
+.account-inner-page
+{
+border: 1px solid white;
+border-radius: 10px;
+background-color:#b2f2c7;
+padding: 10px;
+}
+
+
+#id_model option:disabled {
+    display: none;
+}
+
+
+.form-select-sm
+{
+width: 300px;
+}
+.input-group
+{width: 300px;}
+
+
+a#profile-tab.nav-link, a#home-tab.nav-link
+{
+color:white;
+}
+a#home-tab.nav-link.active
+{
+color:black;
+}
+
+li.nav-item:hover
+{
+background-color:#65e58f
+}
+
+a#profile-tab.nav-link.active.show
+{
+color:black;
+}
+
+a#profile-tab.nav-link:hover
+{
+color:black;
+}
+
+.a-header
+{
+    color: white;
+    text-decoration: none;
+    
+}
+
+.a-header:hover
+{
+    color: black;
+}
+
+li:hover
+{
+    background-color: rgb(223, 223, 223);
+}
+
+.select-width
+{
+    width: 200px;
+}
+.parameters
+{
+    padding: 50px;
+    border-radius: 20px;
+    background-color: #b2f2c7;
+    width: 80%;
+    
+}
+
+
+.choosecar
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    column-gap: 160px;
+
+}
+
+.price-year-width
+{
+    width: 300px;
+    padding-top: 15px;
+    padding-right: 50px;
+}
+
+.price-year
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.mileage-drivewheels-width
+{
+    width: 300px;
+    padding-top: 15px;
+    padding-right: 50px;
+}
+
+.mileage-drivewheels
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 1080px;
+}
+
+.sorting-width
+{
+    width: 300px;
+    padding-top:  20px;
+}
+
+.parameters-wrap
+{
+    display: flex;
+    justify-content: center;
+}
+
+.btn-close
+{
+position: absolute;
+right: 24px;
+}
+
+.alerts-div
+{
+position: fixed;
+opacity: 90%;
+right: 10px;
+}
+
+div.alert.alert-info
+{
+width: 400px;
+text-align: center;
+}
+
+.parameters-inner
+{
+    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    width: 1180px;
+    margin: 0 auto;
+}
+
+.accept-button
+{
+    padding-top: 10px;
+    width: 1080px;
+    display: flex;
+    justify-content: right;
+
+}
+.favorites-img
+{
+width:150px;
+max-height: 200px;
+height: auto;
+border-radius: 10px;}
+
+.ads-img
+{
+    height: 250px;
+    width: 250px;
+    border-radius: 10px;
+    margin-right: 15px;
+}
+
+
+.location-width
+{
+padding-top: 15px;
+}
+.login-out
+{
+color:white;
+font-size: 17px;
+}
+
+.login-out:hover
+{
+color:white;}
+
+.user-text
+{
+    color:white;
+    font-size:22px;
+    padding: 20px;
+}
+
+.helptext
+{
+display: none;
+}
+
+.registration-form
+{
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+width: 600px;
+justify-items: center;
+align-items: center;
+}
+.ads
+{
+    width: 1200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: white;
+    border-radius: 15px;
+    padding: 10px;
+}
+
+.buttons-account
+{
+    display:flex;
+    flex-direction: row;
+}
+
+.error-message
+{
+color:red;
+}
+
+.create-account-button
+{
+    align-self: center;
+    justify-self: center;
+}
+.first-column1
+{
+    display: flex;
+}
+
+.favorite-params
+{
+display: flex;
+flex-direction: column;
+}
+
+.favorite-wrap
+{
+display: flex;
+flex-direction: row;
+justify-content: space-around;
+background-color: white;
+border-radius: 10px;
+margin: 10px;
+padding: 10px;
+}
+
+#id_username, #id_first_name, #id_email, #id_password, #id_password2
+{
+display: block;
+border-radius: 0.25rem;
+font-family: inherit;
+font-size: 1rem;
+color: #212529;
+background-color: #fff;
+border: 1px solid #bdbdbd;
+transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+background-clip: padding-box;
+}
+
+input.btn.btn-outline-primary
+{
+color: white;
+font-weight: bold;
+border: 1px solid blue;
+border-radius: 10px;
+font-weight: bold;
+}
+
+.ads-wrap1
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 50px;
+}
+
+h3 a
+{
+    text-decoration: none;
+    color: black;
+}
+
+.tech-params
+{
+    font-size: 18px;
+}
+
+.second-column
+{
+    justify-self: flex-end;
+}
+
+:root {
+    --size: 100px;
+    --frames: 62;
+  }
+  
+  .heartcheckbox {
+    display: none;
+  }
+  
+  
+  .like {
+    display: block;
+    width: var(--size);
+    height: var(--size);
+    cursor: pointer;
+    border-radius: 999px;
+    overflow: visible;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: transparent;
+  }
+  
+  .hearth {
+    background-image: url('https://assets.codepen.io/23500/Hashflag-AppleEvent.svg');
+    background-size: calc(var(--size) * var(--frames)) var(--size);
+    background-repeat: no-repeat;
+    background-position-x: calc(var(--size) * (var(--frames) * -1 + 2));
+    background-position-y: calc(var(--size) * 0.02);
+    width: var(--size);
+    height: var(--size);
+    justify-self: flex-end;
+  }
+  
+  input:checked + .hearth {
+    animation: like 1s steps(calc(var(--frames) - 3));
+    animation-fill-mode: forwards;
+  }
+  
+  @keyframes like {
+    0% {
+      background-position-x: 0;
+    }
+    100% {
+      background-position-x: calc(var(--size) * (var(--frames) * -1 + 3));
+    }
+  }
+  
+  @media (hover: hover) {
+    .like:hover {
+      background-color: #E1255E15;
+    }
+  }
+
+  .hearth {
+    background-position-x: calc(var(--size) * (var(--frames) * -1 + 1));
+  }
+
+  .container
+  {
+      width: 1200px;
+      margin: 0 auto;
+  }
+
+
+.developers-cards
+{
+display: flex;
+flex-direction: row;
+justify-content: space-around;
+}
+
+.our-team
+{
+text-align: center;
+margin: 20px;
+}

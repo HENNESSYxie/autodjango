@@ -1,0 +1,10 @@
+{% extends "ads/layout.html" %}
+
+{% block title %}Добро пожаловать{% endblock %}
+
+{% block content %}
+<div class="auth-info-divs">
+    <h1 class="auth-page-header">Добро пожаловать, {{ new_user.username }}!</h1>
+    <p clas="some-text-p">Ваш аккаунт успешно создан. Теперь вы можете <a href="{% url 'login' %}">Войти</a>.</p>
+</div>
+{% endblock %}

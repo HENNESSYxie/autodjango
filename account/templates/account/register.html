@@ -1,0 +1,29 @@
+{% extends "ads/layout.html" %}
+
+{% block title %}Создать аккаунт{% endblock %}
+
+{% block content %}
+<div class="register-page-full">
+    <h1 class="auth-page-header">Создать аккаунт</h1>
+    <p class="some-text-p">Пожалуйста, зарегистрируйтесь, используя форму ниже:</p>
+    <form action="." method="post" class="registration-form">
+        <span class="user-id-dashboard">Логин:
+        {{ user_form.username }}
+        </span>
+        <span class="user-id-dashboard">Имя:
+        {{ user_form.first_name }}
+        </span>
+        <span class="user-id-dashboard">Почта:
+        {{ user_form.email }}
+        </span>
+        <span class="user-id-dashboard">Пароль:
+        {{ user_form.password }}
+        </span>
+        <span class="user-id-dashboard">Повторите пароль:
+        {{ user_form.password2 }}
+        </span>
+        {% csrf_token %}
+        <p><input type="submit" class="btn btn-outline-primary" value="Создать аккаунт"></p>
+    </form>
+    </div>
+{% endblock %}

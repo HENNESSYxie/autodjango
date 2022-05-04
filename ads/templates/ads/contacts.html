@@ -1,0 +1,75 @@
+{% extends 'ads/layout.html'%}
+{%load static%}
+{% block title %}
+Страница про контакты
+{% endblock %}
+
+
+{% block content %}
+<div class="contacts-div">
+<h1 class="our-team">Наша команда</h1>
+    <div class="developers-cards">
+        <div class="dev-card">
+            <div class="user-image-contacts">
+                <img src="{% static 'images/contacts-image.png' %}" class="user-image-image" alt="">
+            </div>
+            <div class="user-name-contacts">
+                <h4>Большаков Григорий</h4>
+            </div>
+            <hr>
+            <div class="user-email-contacts">
+                <h5 class="user-text-contacts"><i class="fa-solid fa-envelope-circle-check"></i> g.bolshakov.imikn@gmail.com</h5>
+            </div>
+            <hr>
+            <div class="user-vk-contacts">
+               <a href="https://vk.com/id431586524" target="_blank"><h5 class="user-text-contacts"><i class="fa-brands fa-vk"></i> ВКонтакте</h5></a>
+            </div>
+            <hr>
+            <div class="user-telegram-contacts">
+                <a href="https://t.me/dooper" target="_blank"><h5 class="user-text-contacts"><i class="fa-brands fa-telegram"></i> Телеграм</h5></a>
+            </div>
+        </div>
+        <div class="dev-card">
+            <div class="user-image-contacts">
+                <img src="{% static 'images/contacts-image.png' %}" class="user-image-image" alt="">
+            </div>
+            <div class="user-name-contacts">
+                <h4>Радаев Кирилл</h4>
+            </div>
+            <hr>
+            <div class="user-email-contacts">
+                <h5 class="user-text-contacts"><i class="fa-solid fa-envelope-circle-check"></i> k_radaev@mail.ru</h5>
+            </div>
+            <hr>
+            <div class="user-vk-contacts">
+               <a href="https://vk.com/tell_me_who" target="_blank"><h5 class="user-text-contacts"><i class="fa-brands fa-vk"></i> ВКонтакте</h5></a>
+            </div>
+            <hr>
+            <div class="user-telegram-contacts">
+                <a href="https://t.me/fear_in" target="_blank"><h5 class="user-text-contacts"><i class="fa-brands fa-telegram"></i> Телеграм</h5></a>
+            </div>
+        </div>
+        <div class="dev-card">
+            <div class="user-image-contacts">
+                <img src="{% static 'images/contacts-image.png' %}" class="user-image-image" alt="">
+            </div>
+            <div class="user-name-contacts">
+                <h4>Хатамов Азизжон</h4>
+            </div>
+            <hr>
+            <div class="user-email-contacts">
+                <h5 class="user-text-contacts"><i class="fa-solid fa-envelope-circle-check"></i> hennessyxie@gmail.com</h5>
+            </div>
+            <hr>
+            <div class="user-vk-contacts">
+               <a href="https://vk.com/hennessyxie" target="_blank"><h5 class="user-text-contacts"><i class="fa-brands fa-vk"></i> ВКонтакте</h5></a>
+            </div>
+            <hr>
+            <div class="user-telegram-contacts">
+                <a href="https://t.me/hennessyoyo" target="_blank"><h5 class="user-text-contacts"><i class="fa-brands fa-telegram"></i> Телеграм</h5></a>
+            </div>
+        </div>
+
+    </div>
+</div>
+{% endblock %}
