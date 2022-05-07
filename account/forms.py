@@ -4,7 +4,7 @@ from django import forms
 from ads.models import AdsBookmark, Auto
 
 
-class UserUpdateInfoForm(ModelForm):
+class UserUpdateInfoForm(ModelForm): #форма редактирования данных пользователя
 
     class Meta:
         model = User
@@ -20,7 +20,7 @@ class UserUpdateInfoForm(ModelForm):
         }
 
 
-class UserRegistrationForm(ModelForm):
+class UserRegistrationForm(ModelForm): #форма регистрации пользователя
     password = forms.CharField(label='Password', widget=forms.PasswordInput(attrs={'class': 'form-control'}))
     password2 = forms.CharField(label='Repeat password', widget=forms.PasswordInput(attrs={'class': 'form-control'}))
 
@@ -47,12 +47,12 @@ class UserRegistrationForm(ModelForm):
         return cd['password2']
 
 
-class LoginForm(forms.Form):
+class LoginForm(forms.Form): #форма авторизации пользователя
     username = forms.CharField(widget=forms.TextInput(attrs={'class': 'form-control'}))
     password = forms.CharField(widget=forms.PasswordInput(attrs={'class': 'form-control'}))
 
 
-class RemoveFromBookmark(ModelForm):
+class RemoveFromBookmark(ModelForm): #форма удаления избранного
     class Meta:
         model = AdsBookmark
         fields = ['user', 'ad']

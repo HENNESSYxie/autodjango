@@ -4,7 +4,7 @@ from django import forms
 from .models import Auto, AdsBookmark
 
 
-class FilterAds(ModelForm):
+class FilterAds(ModelForm): #форма фильтра объявлений
     MARKS = list()
     distinct_marks = Auto.objects.values('mark').distinct()
     MODELS = list()

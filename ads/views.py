@@ -9,11 +9,11 @@ queryset = None
 
 
 # Create your views here.
-def index(request):
-    if request.method == 'POST':
+def index(request): #рендер главной страницы
+    if request.method == 'POST': #Если запрос пост, то мы должны проверить фильтры
         form = FilterAds(request.POST)
         if form.is_valid():
-            objects = Auto.objects.all()
+            objects = Auto.objects.all() #получаем все объекты класса Auto, далее проходимся по каждому полю фильтра и фильтруем объекты которые мы получили
             mark = form.cleaned_data.get('mark')
             if mark != 'all':
                 objects = objects.filter(mark=mark)
@@ -59,14 +59,14 @@ def index(request):
                     objects = objects.filter(location=location)
             global queryset
             queryset = objects
-            paginator = Paginator(objects, 20)  # Show 25 contacts per page.
+            paginator = Paginator(objects, 20)  # Show 20 contacts per page.
             page_number = request.GET.get('page')
             page_obj = paginator.get_page(page_number)
             return render(request, 'ads/main.html', {'page_obj': page_obj, 'form': form})
     elif queryset:
         form = FilterAds(
             initial={'mark': queryset[0].mark, 'model': queryset[0].model, 'drive_wheels': queryset[0].drivewheels})
-        paginator = Paginator(queryset, 20)  # Show 25 contacts per page.
+        paginator = Paginator(queryset, 20)  #используем пагинатор от Django, выводим 20 объявлений на странице
         page_number = request.GET.get('page')
         page_obj = paginator.get_page(page_number)
         return render(request, 'ads/main.html', {'page_obj': page_obj, 'form': form})
@@ -81,7 +81,7 @@ def index(request):
 
 
 @login_required
-def add_to_favourites(request, pk):
+def add_to_favourites(request, pk): #добавить в избранное, если нет в избранном то создаем объект модели AdsBookmark и сохраняем
     if AdsBookmark.objects.filter(user=request.user.id, ad=pk):
         messages.info(request, 'Уже в избранном!')
     else:

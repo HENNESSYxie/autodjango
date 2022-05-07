@@ -2,7 +2,7 @@ from django.db import models
 from django.contrib.auth.models import User
 
 
-class Auto(models.Model):
+class Auto(models.Model): #модель объявления автомобиля
     id = models.AutoField(db_column='ID', primary_key=True)  # Field name made lowercase.
     mark = models.TextField(db_column='Mark')  # Field name made lowercase. This field type is a guess.
     model = models.TextField(db_column='Model')  # Field name made lowercase. This field type is a guess.
@@ -23,7 +23,7 @@ class Auto(models.Model):
         db_table = 'Auto'
 
 
-class AdsBookmark(models.Model):
+class AdsBookmark(models.Model): #модель избранного, к пользователю привязывается объявление
     class Meta:
         db_table = "bookmark_ads"
 

@@ -1,6 +1,6 @@
 from django.db import models
 
-
+#модель новости
 class News(models.Model):
     id = models.AutoField(db_column='ID', primary_key=True)  # Field name made lowercase.
     link = models.TextField()  # This field type is a guess.

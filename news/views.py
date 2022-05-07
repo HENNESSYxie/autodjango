@@ -4,6 +4,7 @@ from django.views.generic import DetailView
 from .models import News
 
 
+#отображение главной страницы вкладки новостей, получаем все новости и используя пагинатор выводим их на странице
 def news(request):
     objs = News.objects.all()
     paginator = Paginator(objs, 20)
@@ -12,7 +13,7 @@ def news(request):
     return render(request, 'ads/news.html', {'page_obj': page_obj})
 
 
-class NewsDetailView(DetailView):
+class NewsDetailView(DetailView): #детальное отображение новости id
     model = News
     template_name = 'ads/news-inner.html'
     context_object_name = 'news'
